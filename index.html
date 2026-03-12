@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Everything 🇮🇳❤️🇵🇭</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;500;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff758c;
+            --secondary: #ff7eb3;
+            --gold: #dfab00;
+            --glass: rgba(255, 255, 255, 0.7);
+            --insta: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc23b6, #bc1888);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #fff5f7;
+            overflow-x: hidden;
+            color: #444;
+            transition: 1s ease;
+        }
+
+        /* Animated Floating Background Elements */
+        .bg-circle {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+            animation: floatBG 20s infinite alternate;
+        }
+
+        @keyframes floatBG {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
+        }
+
+        /* Header / Memory Tag */
+        .memory-badge {
+            background: var(--insta);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(188, 24, 136, 0.2);
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        /* The Main Stage */
+        .stage {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 40px;
+            padding: 60px 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Feature: The Heartbeat Connection */
+        .heartbeat-container {
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .pulse-heart {
+            font-size: 2rem;
+            animation: heartBeat 1.2s infinite;
+            color: var(--primary);
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            15% { transform: scale(1.3); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.15); }
+            60% { transform: scale(1); }
+        }
+
+        /* Typography */
+        h1 { font-family: 'Playfair Display', serif; font-style: italic; font-size: 2.8rem; margin: 10px 0; }
+        .handwritten { font-family: 'Dancing Script', cursive; font-size: 4.5rem; color: var(--primary); }
+
+        /* The Bracelet Mystery */
+        .mystery-box {
+            background: white;
+            border: 2px dashed var(--gold);
+            padding: 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+            margin: 40px 0;
+        }
+
+        .mystery-box:hover { background: #fffcf0; transform: scale(1.02); }
+
+        /* Buttons */
+        .btn {
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .btn:hover { background: var(--primary); color: white; transform: translateY(-3px); }
+
+        /* Hidden Surprise: Message in a Bottle */
+        #bottle {
+            font-size: 3rem;
+            cursor: pointer;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        #bottle:hover { transform: rotate(20deg) scale(1.2); }
+
+        /* Hug Overlay */
+        #hug-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 117, 140, 0.6);
+            backdrop-filter: blur(15px);
+            display: none; justify-content: center; align-items: center;
+            z-index: 2000;
+        }
+
+        .sparkle { position: fixed; pointer-events: none; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-circle" style="width: 400px; height: 400px; background: #ff758c; top: -100px; left: -100px;"></div>
+    <div class="bg-circle" style="width: 300px; height: 300px; background: #79f1ff; bottom: -50px; right: -50px;"></div>
+
+    <div class="stage">
+        
+        <div id="intro" class="glass-card">
+            <div class="memory-badge">EST. JUNE • INSTAGRAM 📸</div>
+            <h1>A Special Delivery...</h1>
+            <p>From a brother in India 🇮🇳 <br> To the best sister in Philippines 🇵🇭</p>
+            <br>
+            <button class="btn" onclick="startApp()">Unlock the Message</button>
+        </div>
+
+        <div id="main-content" style="display: none; width: 100%; max-width: 700px;">
+            <div class="glass-card">
+                <div class="heartbeat-container">
+                    <span>INDIA</span>
+                    <div class="pulse-heart">❤️</div>
+                    <span>PHILIPPINES</span>
+                </div>
+
+                <div class="handwritten">My Everything</div>
+                
+                <p style="text-align: left; line-height: 1.8; font-size: 1.1rem; color: #555;">
+                    Since that day in <span style="font-weight: 700; color: #bc1888;">June</span> when we first talked on Instagram, you've become a part of my life I never want to lose. 
+                    <br><br>
+                    You might think you annoy me sometimes, but the truth is: <span style="font-weight: 700; color: var(--primary);">you never do.</span> I care about you more than I can ever show through a phone screen. You aren't just a friend; you are my sister by heart.
+                </p>
+
+                <div class="mystery-box" id="braceletBox" onclick="unlockBracelet()">
+                    <div id="box-icon" style="font-size: 2.5rem;">🔒</div>
+                    <p id="box-label" style="font-weight: 700; color: var(--gold);">THE BRACELET PROMISE (Click to Unlock)</p>
+                    <div id="bracelet-reveal" style="display: none; animation: fadeIn 1s forwards;">
+                        <p style="font-style: italic; color: #444;">
+                            "I am keeping those bracelets secure for you. They are more than jewelry; they are my promise that one day, we will meet in person and I will finally get to give them to my sister."
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin: 30px 0;">
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Surprise: Shake the bottle below</p>
+                    <div id="bottle" onclick="openBottle()">🍾</div>
+                </div>
+
+                <button class="btn" onclick="triggerHug()" style="border-color: #ff7eb3; color: #ff7eb3;">Send a Real Hug 🫂</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="hug-overlay" onclick="this.style.display='none'">
+        <div style="text-align: center; color: white;">
+            <div style="font-size: 10rem;">🫂</div>
+            <h2>WARMTH SENT ACROSS THE OCEAN!</h2>
+            <p>(Click anywhere to go back)</p>
+        </div>
+    </div>
+
+    <audio id="chime" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+    <script>
+        function startApp() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            document.body.style.background = "#fff0f3";
+            setInterval(() => spawnSparkle(['🌸', '✨', '💖']), 800);
+        }
+
+        function unlockBracelet() {
+            document.getElementById('chime').play();
+            document.getElementById('box-icon').innerHTML = "✨";
+            document.getElementById('box-label').style.display = "none";
+            document.getElementById('bracelet-reveal').style.display = "block";
+            document.getElementById('braceletBox').style.borderColor = "var(--primary)";
+            document.getElementById('braceletBox').onclick = null;
+            
+            for(let i=0; i<15; i++) {
+                setTimeout(() => spawnSparkle(['💎', '⭐', '✨']), i * 100);
+            }
+        }
+
+        function openBottle() {
+            const messages = [
+                "You are the best! 🌟",
+                "I'm so lucky to have you! 🍀",
+                "Distance is just a number! 🌏",
+                "Bracelets are waiting! ⌚",
+                "Sister for life! ♾️"
+            ];
+            const msg = messages[Math.floor(Math.random() * messages.length)];
+            alert("A message floated from India: \n\n \"" + msg + "\"");
+        }
+
+        function triggerHug() {
+            document.getElementById('hug-overlay').style.display = 'flex';
+        }
+
+        function spawnSparkle(icons) {
+            const s = document.createElement('div');
+            s.className = 'sparkle';
+            s.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+            s.style.left = Math.random() * 100 + 'vw';
+            s.style.top = '105vh';
+            s.style.fontSize = Math.random() * 20 + 10 + 'px';
+            document.body.appendChild(s);
+
+            const anim = s.animate([
+                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                { transform: `translateY(-110vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ], { duration: 4000 + Math.random() * 2000 });
+
+            anim.onfinish = () => s.remove();
+        }
+    </script>
+</body>
+</html>
